@@ -1,0 +1,2 @@
+apply plugin: 'java'
+configurations.runtime.each { File f -> println f}

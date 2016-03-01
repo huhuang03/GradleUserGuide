@@ -1,0 +1,3 @@
+include 'shared', 'service', 'api'
+include 'service:shared'
+include 'service:webservice'

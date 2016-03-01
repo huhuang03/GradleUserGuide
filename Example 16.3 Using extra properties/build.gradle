@@ -1,0 +1,29 @@
+apply plugin: "java"
+
+project.ext {
+    springVersion = "3.1.RELEASE"
+    emailNotifation = "build@master.org"
+}
+
+sourceSets.all {ext.purpose = null}
+
+sourceSets {
+    main {
+        purpose = "production"
+    }
+    test {
+        purpose = "test"
+    }
+    plugin {
+        purpose = "production"
+    }
+}
+
+task printProperties << {
+    println springVersion
+    println emailNotifation
+    println sourceSets
+    sourceSets.matching {it.purpose == "production"}.each {println it.name}
+}
+
+

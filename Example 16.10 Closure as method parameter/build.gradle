@@ -1,0 +1,5 @@
+repositories({println "in a closure"})
+
+repositories() {println "in a closure"}
+
+repositories {println "in a closure"}

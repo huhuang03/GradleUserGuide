@@ -1,0 +1,7 @@
+task configure << {
+    def pos = new java.text.FieldPosition(10)
+
+    apply from: 'other.gradle', to: pos
+    println pos.beginIndex
+    println pos.endIndex
+}

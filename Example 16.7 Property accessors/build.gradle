@@ -1,0 +1,10 @@
+//apply plugin: 'java'
+
+task print << {
+    println project.buildDir 
+
+    project.buildDir = "target"
+    getProject().setBuildDir("target")
+
+    println getProject().getBuildDir()
+}

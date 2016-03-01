@@ -1,0 +1,9 @@
+apply plugin: 'java'
+// auto-delegate to project object
+println name
+
+println project.name
+
+println project.allprojects
+
+println project.buildDir
