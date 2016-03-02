@@ -1,0 +1,14 @@
+configurations {
+    compile {
+        description = 'compile classpath'
+        transitive = true
+    }
+
+    runtime {
+        extendsFrom compile
+    }
+}
+
+configurations.compile {
+    description = 'compile classpath'
+}
